@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TouchInput</string>
+    <string name="touch_input">手写输入</string>
+    <string name="complete">完成</string>
+    <string name="input_box">输入结果</string>
+    <string name="ideas_for_inspiration">思路点拨</string>
+    <string name="next_topic">下一题</string>
+    <string name="last_topic">上一题</string>
+    <string name="problem_sets_summary">习题小结</string>
+    <string name="mistakes_list">错题列表</string>
+    <string name="topic">题目</string>
+    <string name="question_types">题型</string>
+    <string name="in_class_work">课堂习题</string>
+    <string name="class_work">课堂作业</string>
+    <string name="advertisement">广告</string>
+</resources>

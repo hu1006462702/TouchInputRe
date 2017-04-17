@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tlh_button_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/tlh_color_white"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_top_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="9dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            style="@style/title_name_input"
+            android:text="@string/touch_input" />
+
+        <TextView
+            android:id="@+id/tv_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/complete"
+            android:textColor="@color/tlh_color_blue_date"
+            android:visibility="visible" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="@string/input_box"
+        android:textSize="16sp"
+        android:textColor="@color/tlh_color_black_date"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical" />
+    <LinearLayout
+        android:id="@+id/ll_input_dialog"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_square_side_gray">
+        <EditText
+            android:id="@+id/et"
+            android:inputType=""
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+</LinearLayout>
