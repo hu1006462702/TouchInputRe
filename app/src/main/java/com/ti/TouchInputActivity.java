@@ -61,7 +61,7 @@ public class TouchInputActivity extends Activity implements View.OnClickListener
             super.handleMessage(msg);
             switch (msg.what) {
                 case CHANGE_IMAGE:
-                    CommUtils.deleteFolderFile(photoUrl, true);
+
                     Intent in = new Intent();
                     in.putExtra("image", photoUrl);
                     SpannableStringBuilder s = SpannableStringBuilder.valueOf(editText.getText());

@@ -3,6 +3,8 @@ package com.ti;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,9 +16,11 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    private TextView iv1,iv2,iv3,iv4;
+    private ImageView iv1,iv2,iv3,iv4;
     private Button btn1,btn2,btn3,btn4;
     private Context context;
     private final int TOUCH_INPUT = 2001;
@@ -27,10 +31,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context=MainActivity.this;
-        iv1=(TextView)findViewById(R.id.iv1);
-        iv2=(TextView)findViewById(R.id.iv2);
-        iv3=(TextView)findViewById(R.id.iv3);
-        iv4=(TextView)findViewById(R.id.iv4);
+        iv1=(ImageView)findViewById(R.id.iv1);
+        iv2=(ImageView)findViewById(R.id.iv2);
+        iv3=(ImageView)findViewById(R.id.iv3);
+        iv4=(ImageView)findViewById(R.id.iv4);
         btn1=(Button)findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
         btn3=(Button)findViewById(R.id.btn3);
@@ -92,16 +96,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         public void run() {
                             switch (number){
                                 case 1:
-                                    iv1.setText(imagePath);
+                                    iv1.setImageURI(Uri.parse(imagePath));
+                                    CommUtils.deleteFolderFile(imagePath, true);
                                     break;
                                 case 2:
-                                    iv2.setText(imagePath);
+                                    iv2.setImageURI(Uri.parse(imagePath));
+                                    CommUtils.deleteFolderFile(imagePath, true);
                                     break;
                                 case 3:
-                                    iv3.setText(imagePath);
+                                    iv3.setImageURI(Uri.parse(imagePath));
+                                    CommUtils.deleteFolderFile(imagePath, true);
                                     break;
                                 case 4:
-                                    iv4.setText(imagePath);
+                                    iv4.setImageURI(Uri.parse(imagePath));
+                                    CommUtils.deleteFolderFile(imagePath, true);
                                     break;
                             }
                         }
